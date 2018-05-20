@@ -147,7 +147,7 @@ docker run -d -p ${APACHE_PORT}:80 ${APACHE_IMAGE}" > $dname/config-drives/vm2-c
 echo "server {
         listen 443 ssl;
         ssl on;
-        ssl_certificate /etc/ssl/certs/web-bundle.crt;
+        ssl_certificate /etc/ssl/certs/web.crt;
         ssl_certificate_key /etc/ssl/certs/web.key;
         location / {
                 proxy_pass http://${VM2_VXLAN_IP}:${APACHE_PORT};
